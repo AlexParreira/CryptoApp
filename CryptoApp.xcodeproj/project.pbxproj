@@ -19,6 +19,7 @@
 		EB72695F2ABE15490040CA4C /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72695E2ABE15490040CA4C /* CoinModel.swift */; };
 		EB7269612ABE3B020040CA4C /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7269602ABE3B020040CA4C /* CoinRowView.swift */; };
 		EB7269632ABE3B7E0040CA4C /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7269622ABE3B7E0040CA4C /* PreviewProvider.swift */; };
+		EBA255382AC100E30037C62A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA255372AC100E30037C62A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		EB72695E2ABE15490040CA4C /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		EB7269602ABE3B020040CA4C /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		EB7269622ABE3B7E0040CA4C /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		EBA255372AC100E30037C62A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		EB7269542ABE0B510040CA4C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EBA255372AC100E30037C62A /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB7269612ABE3B020040CA4C /* CoinRowView.swift in Sources */,
+				EBA255382AC100E30037C62A /* HomeViewModel.swift in Sources */,
 				EB7269432ABE00330040CA4C /* ContentView.swift in Sources */,
 				EB7269562ABE0B690040CA4C /* HomeView.swift in Sources */,
 				EB7269412ABE00330040CA4C /* CryptoAppApp.swift in Sources */,
