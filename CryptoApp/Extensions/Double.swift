@@ -60,11 +60,40 @@ extension Double {
         return currencyFormatter6.string(from: number) ?? "$0.00"
     }
     
-    func AsNumberString() -> String{
+    func AsNumberString() -> String {
         return String(format: "%.2f",self)
     }
     
-    func asPercentString() -> String{
+    func asPercentString() -> String {
         return AsNumberString() + "%"
+    }
+    
+    func formattedWithAbbreviations() -> String{
+        let num = abs(Double(self))
+        let sing = (self < 0) ? "-" : ""
+        
+        switch num {
+            case 1_000_000_000_000...:
+                let formatted = num / 1_000_000_000_000
+                let stringFormatted = formatted.AsNumberString()
+                return "\(sing)\(stringFormatted)Tr"
+            case 1_000_000_000...:
+                let formatted = num / 1_000_000_000
+                let stringFormatted = formatted.AsNumberString()
+                return "\(sing)\(stringFormatted)Bn"
+            case 1_000_000...:
+                let formatted = num / 1_000_000
+                let stringFormatted = formatted.AsNumberString()
+                return "\(sing)\(stringFormatted)M"
+            case 1_000...:
+                let formatted = num / 1_000
+                let stringFormatted = formatted.AsNumberString()
+                return "\(sing)\(stringFormatted)K"
+            case 0...:
+                return self.AsNumberString()
+            default:
+                return "\(sing)\(self)"
+        }
+        
     }
 }
