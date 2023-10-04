@@ -60,7 +60,7 @@ extension PortifolioView {
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background(
@@ -75,6 +75,18 @@ extension PortifolioView {
             .padding(.leading)
         })
     }
+    
+    private func updateSelectedCoin(coin: CoinModel) {
+        selectedCoin = coin
+        
+        if let portifolioCoin = vm.portifolioCoins.first(where: { $0.id == coin.id }),
+           let amount = portifolioCoin.currentHoldings{
+            quantityText = "\(amount)"
+        } else {
+            quantityText = ""
+        }
+    }
+    
     
     private func getCurrentValue() -> Double{
         if let quantity = Double(quantityText){
@@ -132,11 +144,15 @@ extension PortifolioView {
     private func saveButtonPressed() {
         
         
-        guard let coin = selectedCoin else {return}
+        guard 
+            let coin = selectedCoin,
+            let amount = Double(quantityText)
+        
+            else {return}
         
         
         //MARK: save to portfolio
-        
+        vm.updatePortifolio(coin: coin, amount: amount)
         
         //MARK: show checkmark
         
