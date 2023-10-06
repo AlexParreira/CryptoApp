@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113D02772ACF2EEA003436B2 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113D02762ACF2EEA003436B2 /* HapticManager.swift */; };
 		114DE2CD2ACB85C100286CB8 /* PortifolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE2CC2ACB85C100286CB8 /* PortifolioView.swift */; };
 		114DE2CF2ACB898000286CB8 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DE2CE2ACB898000286CB8 /* XMarkButton.swift */; };
 		119F70112ACB8D22008EC671 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F70102ACB8D22008EC671 /* CoinLogoView.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113D02762ACF2EEA003436B2 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		114DE2CC2ACB85C100286CB8 /* PortifolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortifolioView.swift; sourceTree = "<group>"; };
 		114DE2CE2ACB898000286CB8 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		119F70102ACB8D22008EC671 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				EB9C1DB62AC1E08700AFC1AE /* NetworkingManager.swift */,
 				EBA2914C2AC35BB600ED160C /* LocalFileManager.swift */,
+				113D02762ACF2EEA003436B2 /* HapticManager.swift */,
 			);
 			path = Ultilities;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				EBA291472AC34ED500ED160C /* CoinImageView.swift in Sources */,
 				EB7269412ABE00330040CA4C /* CryptoAppApp.swift in Sources */,
 				EB324AFE2AC4EF9C00902FF6 /* UIApplication.swift in Sources */,
+				113D02772ACF2EEA003436B2 /* HapticManager.swift in Sources */,
 				EB72695A2ABE0D2F0040CA4C /* CircleButtonView.swift in Sources */,
 				EB7269502ABE024C0040CA4C /* Color.swift in Sources */,
 				EB324AFC2AC4E33600902FF6 /* SearchBarView.swift in Sources */,
