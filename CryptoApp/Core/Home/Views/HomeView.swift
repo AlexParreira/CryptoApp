@@ -13,10 +13,12 @@ struct HomeView: View {
     @State private var showPortfolio: Bool = false
     @State private var showPortfolioView: Bool = false
     
+    @State private var selectedCoin: CoinModel? = nil
+    @State private var showDetailView: Bool = false
     
     var body: some View {
         ZStack{
-                //MARK: background layer
+            //MARK: background layer
             Color.theme.background
                 .ignoresSafeArea()
                 .sheet(isPresented: $showPortfolioView, content: {
@@ -24,7 +26,7 @@ struct HomeView: View {
                         .environmentObject(vm)
                 }
                 )
-                //MARK: content layer
+            //MARK: content layer
             VStack{
                 homeHeader
                 HomeStatsView(showPortifolio: $showPortfolio)
@@ -43,8 +45,14 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .background(
+            NavigationLink(
+                destination: DetailLoadingView(coin: $selectedCoin),
+                isActive: $showDetailView,
+                label: { EmptyView() })
+        )
     }
-    
+}
     struct HomeView_Previews: PreviewProvider {
         static var previews: some View {
             NavigationView{
@@ -54,7 +62,7 @@ struct HomeView: View {
             .environmentObject(dev.homeVM)
         }
     }
-}
+
     extension HomeView {
         private var homeHeader: some View{
             HStack{
@@ -91,6 +99,9 @@ struct HomeView: View {
                 ForEach(vm.allCoins){ coin in
                     CoinRowView(coin: coin, showHoldingsColumn: false)
                         .listRowInsets(.init(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        .onTapGesture {
+                            segue(coin: coin)
+                        }
                 }
             }
             .listStyle(PlainListStyle())
@@ -101,9 +112,17 @@ struct HomeView: View {
                 ForEach(vm.portifolioCoins){ coin in
                     CoinRowView(coin: coin, showHoldingsColumn: true)
                         .listRowInsets(.init(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        .onTapGesture {
+                            segue(coin: coin)
+                        }
                 }
             }
             .listStyle(PlainListStyle())
+        }
+        
+        private func segue(coin: CoinModel){
+            selectedCoin = coin
+            showDetailView.toggle()
         }
         
         private var columnTitles : some View {
