@@ -43,6 +43,9 @@
 		EBC3A3802AC78117005CF532 /* StaticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3A37F2AC78117005CF532 /* StaticModel.swift */; };
 		EBC3A3822AC782A1005CF532 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3A3812AC782A1005CF532 /* StatisticView.swift */; };
 		EBC3A3842AC7878F005CF532 /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3A3832AC7878F005CF532 /* HomeStatsView.swift */; };
+		FA88402F2AD84EB6003F9933 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88402E2AD84EB6003F9933 /* Date.swift */; };
+		FA8840312AD87440003F9933 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8840302AD87440003F9933 /* String.swift */; };
+		FAE217F72AD75C8A0050800D /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE217F62AD75C8A0050800D /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +86,9 @@
 		EBC3A37F2AC78117005CF532 /* StaticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticModel.swift; sourceTree = "<group>"; };
 		EBC3A3812AC782A1005CF532 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		EBC3A3832AC7878F005CF532 /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		FA88402E2AD84EB6003F9933 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		FA8840302AD87440003F9933 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		FAE217F62AD75C8A0050800D /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				11B3A8932AD1EF4600418D0A /* DetailView.swift */,
+				FAE217F62AD75C8A0050800D /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +175,8 @@
 				EB7269622ABE3B7E0040CA4C /* PreviewProvider.swift */,
 				EB42E79A2ABF7BC200E7A36D /* Double.swift */,
 				EB324AFD2AC4EF9C00902FF6 /* UIApplication.swift */,
+				FA88402E2AD84EB6003F9933 /* Date.swift */,
+				FA8840302AD87440003F9933 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +357,8 @@
 				11C10F242ACC6D9000B151BC /* PortifolioContaineer.xcdatamodeld in Sources */,
 				EBA2553B2AC10B4D0037C62A /* CoinDataService.swift in Sources */,
 				EBA73E832AC8E415005A253F /* marketDataService.swift in Sources */,
+				FA88402F2AD84EB6003F9933 /* Date.swift in Sources */,
+				FAE217F72AD75C8A0050800D /* ChartView.swift in Sources */,
 				EB7269612ABE3B020040CA4C /* CoinRowView.swift in Sources */,
 				114DE2CF2ACB898000286CB8 /* XMarkButton.swift in Sources */,
 				EBA255382AC100E30037C62A /* HomeViewModel.swift in Sources */,
@@ -370,6 +381,7 @@
 				119F70112ACB8D22008EC671 /* CoinLogoView.swift in Sources */,
 				EB9C1DB72AC1E08700AFC1AE /* NetworkingManager.swift in Sources */,
 				EBC3A3842AC7878F005CF532 /* HomeStatsView.swift in Sources */,
+				FA8840312AD87440003F9933 /* String.swift in Sources */,
 				EB72695C2ABE11B90040CA4C /* CircleButtonAnimationView.swift in Sources */,
 				EBA2914B2AC3534C00ED160C /* CoinImageViewModel.swift in Sources */,
 				EB7269632ABE3B7E0040CA4C /* PreviewProvider.swift in Sources */,

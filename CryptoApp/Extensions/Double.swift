@@ -57,7 +57,7 @@ extension Double {
     
     func asCurrencyWith6Decimal() -> String{
         let number = NSNumber(value: self)
-        return currencyFormatter6.string(from: number) ?? "$0.00"
+        return currencyFormatter6.string(from: number) ?? "0.00"
     }
     
     func AsNumberString() -> String {
